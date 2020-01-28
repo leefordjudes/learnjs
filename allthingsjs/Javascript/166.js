@@ -1,17 +1,18 @@
 "use strict";
 
 var objProto = {
-  greet(){ console.log(this.greeting); }
+  greet(){ console.log(greeting); }
 }
 
-const greeting3 = function(greeting){
+const greeting1 = function(greeting){
   let obj = Object.create(objProto);
   obj.greeting = greeting;
+  console.log(obj);
   return obj;
 };
 
-var greet3 = greeting3('hello world');
+var greet1 = greeting1('hello world');
 
-var btn = document.querySelector('#btn').addEventListener('click',greet3.greet);
+var btn = document.querySelector('#btn').addEventListener('click',greet1.greet);
 
 
