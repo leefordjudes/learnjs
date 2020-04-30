@@ -1,5 +1,6 @@
 # learnjs
 try some javascripts language concepts
+Go to LearnJS Github Pages => [LearnJs](https://leefordjudes.github.io/learnjs/)
 
 [AllThingsJavascript](https://www.youtube.com/channel/UCRQhZGXC0WK85YRXl7nGX0w/videos) - learning some javascript concept.
 
