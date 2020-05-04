@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>176.Creating a Function that Can Handle any Number of Arguments</title>
+</head>
+<body>
+  <h1>176.Creating a Function that Can Handle any Number of Arguments</h1>
+  
+  <pre>
+    // Method 1
+    const sum1 = function() {
+      let total = 0;
+      for (let i of arguments) {
+        total += i;
+      }
+      return total;
+    };
+    
+    console.log(sum1(1,2,3,4,5,6,7,8,9,0,11,12,13,14,15));
+    
+    // Method 2
+    const sum2 = (...args) => {
+      return args.reduce((val, sum)=> val + sum, 0);
+    }
+    
+    console.log(sum2(1,2,3,4,5,6,7,8,9,0,11,12,13,14,15));
+  </pre>
+  <a href="./../index.html">Back</a>
+  <script src="176.js"></script>
+</body>
+</html>
