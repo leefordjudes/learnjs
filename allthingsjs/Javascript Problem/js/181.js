@@ -25,12 +25,16 @@ const isObject = function(val) {
   return (typeof val === 'object');
 };
 
-const objProps = function(obj) {
+const objProps = function(obj, origProp) {
   for (let val in obj) {
     if (isObject(obj[val])) {
-      objProps(obj[val]);
+      objProps(obj[val], val);
     } else {
-      console.log(val, obj[val]);
+      if (Array.isArray(obj)) {
+        console.log(origProp +'['+ val+']', obj[val]);
+      } else {
+        console.log(val, obj[val]);
+      }
     }
   }
 } 
